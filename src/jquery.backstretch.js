@@ -168,7 +168,7 @@
   Backstretch.prototype = {
       resize: function () {
         try {
-          var bgCSS = {right: 0, top: 0}
+          var bgCSS = {right: 0, bottom: 0}
             , rootWidth = this.isBody ? this.$root.width() : this.$root.innerWidth()
             , bgWidth = rootWidth
             , rootHeight = this.isBody ? ( window.innerHeight ? window.innerHeight : this.$root.height() ) : this.$root.innerHeight()
@@ -179,7 +179,7 @@
             if (bgHeight >= rootHeight) {
                 bgOffset = (bgHeight - rootHeight) / 2;
                 if(this.options.centeredY) {
-                  bgCSS.top = '-' + bgOffset + 'px';
+                  bgCSS.bottom = '-' + bgOffset + 'px';
                 }
             } else {
                 bgHeight = rootHeight;
